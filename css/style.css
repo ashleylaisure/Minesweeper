@@ -1,0 +1,116 @@
+body {
+    font-family: "Saira Stencil One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    background-color: rgb(10, 147, 150);
+    height: 500px;
+    width: 500px;
+    padding: 15px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* NAVIGATION ------------------------------------ */
+.navigation {
+    background-color: rgb(0, 95, 115);
+    padding: 4px;
+    border-radius: 5px; 
+    width: 470px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bomb-counter, .reset-button{
+    background-color: rgb(0, 18, 25);
+    color: rgb(233, 216, 166);
+
+    border-radius: 5px;
+    border: 4px solid rgb(10, 147, 150);
+    padding: 2px;
+
+    font-size: 32px;
+    height: 50px;
+    width: 50px
+    
+}
+
+.timer {
+    background-color: rgb(0, 18, 25);
+    color: rgb(233, 216, 166);
+
+    border-radius: 5px;
+    border: 4px solid rgb(10, 147, 150);
+    padding: 2px;
+
+    font-size: 32px;
+    height: 50px;
+    width: 75px
+}
+
+.bomb-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GRID --------------------------------------------- */
+#grid {
+    background-color: rgb(0, 95, 115);
+    margin-top: 5px;
+    border-radius: 5px; 
+
+    height: 450px;
+    width: 470px;
+    padding: 2px;
+
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.square{
+    border: 2px solid rgb(233, 216, 166);
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* When the square is clicked */
+/* #square-clicked */
+
+
+/* Numbers in Grid */
+/* #num1
+#num2
+#num3
+#num4
+#num5
+#num6
+#num7
+#num8 */
