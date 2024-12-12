@@ -6,12 +6,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1px;
+}
+
+h1 {
+    margin: 4px;
 }
 
 .board {
     background-color: rgb(10, 147, 150);
-    height: 500px;
-    width: 500px;
+    height: 620px;
+    width: 620px;
     padding: 15px;
     border-radius: 5px;
 
@@ -79,19 +84,19 @@ body {
 /* GRID --------------------------------------------- */
 #grid {
     background-color: rgb(0, 95, 115);
-    margin-top: 5px;
+    margin-top: 3px;
     border-radius: 5px; 
 
-    height: 450px;
-    width: 470px;
-    padding: 2px;
+    height: 560px;
+    width: 520px;
 
     display:flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.square{
+/* design of square when unclicked  */
+.squareUnClicked{
     border: 2px solid rgb(233, 216, 166);
     width: 48px;
     height: 48px;
@@ -102,10 +107,20 @@ body {
 }
 
 /* When the square is clicked */
-/* #square-clicked */
 
+/* bomb*/
 
-/* Numbers in Grid */
+.bombClicked {
+    background-color: rgb(148, 210, 189);
+}
+
+.numClicked {
+    background-color: rgb(233, 216, 166);
+}
+
+.emptySquare {
+    background-color: rgb(10, 147, 150);
+}
 /* #num1
 #num2
 #num3
