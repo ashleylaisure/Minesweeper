@@ -88,21 +88,22 @@ for (let i = 0; i < bombs; i++) {
     let row = Math.floor(Math.random() * 10);
     let column = Math.floor(Math.random() * 10);
 
-// console.log(`row: ${row}`);
-// console.log(`column: ${column}`);
+    if (bombLocations.includes(`${row}${column}`)) {
+        
+        bombs++;
 
+        continue;
+    } 
+    
     bombLocations.push(`${row}${column}`);
+
 };
 
 console.log(bombLocations);
-    
-
-// need to give bombLocations an additional class of bomblocation
 
 // ---------------------------------------------------------------------------
-// Right click on squares
+// Left click on squares 
 
-// rightClick call back function
 const leftClick = (event) => {
     console.log(event.target.id);
 
@@ -120,8 +121,32 @@ const leftClick = (event) => {
     } else {
         console.log('no bomb here');
 
-        let emptySquare 
-    }
+        let rowNum = parseInt(event.target.id[0]);
+
+        let columnNum = parseInt(event.target.id[1]);
+
+        // console.log(event.target.id[0]);
+        console.log(rowNum);
+        console.log(typeof rowNum)
+        // console.log(event.target.id[1]);
+        console.log(columnNum);
+        console.log(typeof columnNum)
+
+        whatsAroundMe(rowNum, columnNum);
+
+        const thisIsMe = document.getElementById(event.target.id);
+        console.dir(thisIsMe);
+        
+        let num = findmyNum();
+
+        if (num > 0) {
+            thisIsMe.classList.add('numClicked');
+            thisIsMe.textContent = `${num}`
+
+        } else if (num === 0 ) {
+            thisIsMe.classList.add('emptySquare');
+        } 
+        
 
 };
 
@@ -132,7 +157,7 @@ gameGrid.addEventListener("click", leftClick);
 
 function findAllBombs() {
     
-    bombLocations.forEach(id => {
+    bombLocations.forEach((id) => {
         const bombSquares = document.getElementById(id);
 
         bombSquares.classList.add('bombClicked');
@@ -142,6 +167,80 @@ function findAllBombs() {
 
 // .numClicked
 // .emptySquare
+
+// find what's around the square that has been clicked -------
+
+
+function whatsAroundMe(row, column) {
+    const aroundMe = [];
+
+    // the square is on the top row 
+    if ( row === 0 || row === 9 || column === 0 || column === 9 ) {
+        return;
+
+    } else {
+        
+    
+
+        // TOP
+        console.log(row-1, column-1)
+        console.log(row-1, column)
+        console.log(row-1, column+1)
+    
+        // bottom
+        console.log(row+1, column-1)
+        console.log(row+1, column)
+        console.log(row+1, column+1)
+    
+        // to the left
+        console.log(row, column-1)
+    
+        // to the right
+        console.log(row, column+1)
+    
+    
+        let topLeft = `${row-1}${column-1}`
+        let topCenter = `${row-1}${column}`
+        let topRight = `${row-1}${column+1}`
+    
+        let bottomLeft = `${row+1}${column-1}`
+        let bottomCenter = `${row+1}${column}`
+        let bottomRight = `${row+1}${column+1}`
+    
+        let leftCenter = `${row}${column-1}`
+        let rightCenter = `${row}${column+1}`
+    
+        aroundMe.push(topLeft)
+        aroundMe.push(topCenter)
+        aroundMe.push(topRight)
+        aroundMe.push(bottomLeft)
+        aroundMe.push(bottomCenter)
+        aroundMe.push(bottomRight)
+        aroundMe.push(leftCenter)
+        aroundMe.push(rightCenter)
+    
+        console.log(aroundMe)
+    }
+    // check whats aroundMe for bombLocations
+
+    findmyNum(aroundMe);
+    
+};
+
+function findmyNum(array){
+    let myNumber = 0;
+
+    for (i of array) {
+        if (bombLocations.includes(i)) {
+            myNumber++;
+        }
+    }
+
+    console.log(myNumber);
+
+    return myNumber;
+
+};
 
 
 // reset button -----------------------------------------
