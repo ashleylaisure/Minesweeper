@@ -6,7 +6,7 @@ const gameGrid = document.querySelector('#grid');
 let rows = 10;
 let columns = 10;
 
-let bombs = 20;
+let bombs = 10;
 
 const gridArray = [];
 
@@ -118,7 +118,7 @@ const leftClick = (event) => {
 
         gameGrid.removeEventListener('click', leftClick);
         
-        // endGame();
+        stopTimer();
 
     } else {
         console.log('no bomb here');
@@ -272,7 +272,7 @@ function startTimer() {
     console.log('startTimer');
 
 
-    const timerSec = setInterval(() => {
+    timerSec = setInterval(() => {
         const timer = document.querySelector('.timer');
 
         timer.textContent++;
@@ -282,8 +282,10 @@ function startTimer() {
     firstClick.removeEventListener('click', startTimer);
 };
 
-// function stopTimer() {
-//     clearInterval(setInterval);
-// };
+function stopTimer() {
+    console.log('stopTimer');
+
+    clearInterval(timerSec);
+};
 
 firstClick.addEventListener('click', startTimer);
