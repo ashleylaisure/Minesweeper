@@ -6,7 +6,7 @@ const gameGrid = document.querySelector('#grid');
 let rows = 10;
 let columns = 10;
 
-let bombs = 10;
+let bombs = 20;
 
 const gridArray = [];
 
@@ -116,7 +116,9 @@ const leftClick = (event) => {
 
         findAllBombs();
 
-        // stopTimer();
+        gameGrid.removeEventListener('click', leftClick);
+        
+        // endGame();
 
     } else {
         console.log('no bomb here');
@@ -137,15 +139,10 @@ const leftClick = (event) => {
         const thisIsMe = document.getElementById(event.target.id);
         console.dir(thisIsMe);
         
-        let num = findmyNum();
-
-        if (num > 0) {
-            thisIsMe.classList.add('numClicked');
-            thisIsMe.textContent = `${num}`
-
-        } else if (num === 0 ) {
-            thisIsMe.classList.add('emptySquare');
-        } 
+        
+        // clickedSquare(thisIsMe);
+        
+    } 
         
 
 };
@@ -165,8 +162,7 @@ function findAllBombs() {
     });
 }
 
-// .numClicked
-// .emptySquare
+
 
 // find what's around the square that has been clicked -------
 
@@ -175,73 +171,88 @@ function whatsAroundMe(row, column) {
     const aroundMe = [];
 
     // the square is on the top row 
-    if ( row === 0 || row === 9 || column === 0 || column === 9 ) {
-        return;
+    // if ( row === 0 || row === 9 || column === 0 || column === 9 ) {
+    //     return;
 
-    } else {
+    // } else {
         
-    
 
-        // TOP
-        console.log(row-1, column-1)
-        console.log(row-1, column)
-        console.log(row-1, column+1)
+    // TOP
+    console.log(row-1, column-1)
+    console.log(row-1, column)
+    console.log(row-1, column+1)
+
+    // bottom
+    console.log(row+1, column-1)
+    console.log(row+1, column)
+    console.log(row+1, column+1)
+
+    // to the left
+    console.log(row, column-1)
+
+    // to the right
+    console.log(row, column+1)
+
+
+    let topLeft = `${row-1}${column-1}`
+    let topCenter = `${row-1}${column}`
+    let topRight = `${row-1}${column+1}`
+
+    let bottomLeft = `${row+1}${column-1}`
+    let bottomCenter = `${row+1}${column}`
+    let bottomRight = `${row+1}${column+1}`
+
+    let leftCenter = `${row}${column-1}`
+    let rightCenter = `${row}${column+1}`
+
+    aroundMe.push(topLeft)
+    aroundMe.push(topCenter)
+    aroundMe.push(topRight)
+    aroundMe.push(bottomLeft)
+    aroundMe.push(bottomCenter)
+    aroundMe.push(bottomRight)
+    aroundMe.push(leftCenter)
+    aroundMe.push(rightCenter)
+
+    console.log(aroundMe)
     
-        // bottom
-        console.log(row+1, column-1)
-        console.log(row+1, column)
-        console.log(row+1, column+1)
-    
-        // to the left
-        console.log(row, column-1)
-    
-        // to the right
-        console.log(row, column+1)
-    
-    
-        let topLeft = `${row-1}${column-1}`
-        let topCenter = `${row-1}${column}`
-        let topRight = `${row-1}${column+1}`
-    
-        let bottomLeft = `${row+1}${column-1}`
-        let bottomCenter = `${row+1}${column}`
-        let bottomRight = `${row+1}${column+1}`
-    
-        let leftCenter = `${row}${column-1}`
-        let rightCenter = `${row}${column+1}`
-    
-        aroundMe.push(topLeft)
-        aroundMe.push(topCenter)
-        aroundMe.push(topRight)
-        aroundMe.push(bottomLeft)
-        aroundMe.push(bottomCenter)
-        aroundMe.push(bottomRight)
-        aroundMe.push(leftCenter)
-        aroundMe.push(rightCenter)
-    
-        console.log(aroundMe)
-    }
     // check whats aroundMe for bombLocations
-
-    findmyNum(aroundMe);
-    
-};
-
-function findmyNum(array){
     let myNumber = 0;
 
-    for (i of array) {
-        if (bombLocations.includes(i)) {
+    for (i of aroundMe) {
+        if(bombLocations.includes(i)) {
             myNumber++;
         }
     }
 
-    console.log(myNumber);
+    console.log(myNumber)
 
-    return myNumber;
+    const mySquare = document.getElementById(`${row}${column}`);
+    console.dir(mySquare);
+
+    if (myNumber > 0) {
+        mySquare.classList.add('numClicked')
+        mySquare.textContent = myNumber
+    } else {
+        mySquare.classList.add('emptySquare')
+    }
 
 };
+// function clickedSquare(id) {
 
+//     let num = findmyNum()
+
+//     const id = document.getElementById(id)
+//     console.dir(id);
+
+//     if (num > 0) {
+//         id.classList.add('numClicked');
+//         id.textContent = `${num}`
+//     } else if (numm === 0 ) {
+//         id.classList.add('emptySquare');
+//     }
+
+// }
 
 // reset button -----------------------------------------
 
