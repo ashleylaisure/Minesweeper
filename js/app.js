@@ -18,7 +18,7 @@ for (let i = 0; i < rows; i++) {
         const gridSquare = document.createElement('div');
 
         // set an class for all divs
-        gridSquare.classList.add('squareUnClicked')
+        gridSquare.classList.add('square')
         // set the div elements's id to its location in the grid
         gridSquare.id = `${i}${j}`
 
@@ -81,12 +81,12 @@ const rightClick = (event) => {
 // add right click event listener for the gameGrid with callback function
 gameGrid.addEventListener("contextmenu", rightClick);
 
-// Locate the bombs ----------------------------------------------------
+// Randomly select where Bombs are located ----------------------------------------------------
 const bombLocations = [];
 
 for (let i = 0; i < bombs; i++) {
-    let row = Math.floor(Math.random() * 11);
-    let column = Math.floor(Math.random() * 11);
+    let row = Math.floor(Math.random() * 10);
+    let column = Math.floor(Math.random() * 10);
 
 // console.log(`row: ${row}`);
 // console.log(`column: ${column}`);
@@ -95,6 +95,7 @@ for (let i = 0; i < bombs; i++) {
 };
 
 console.log(bombLocations);
+    
 
 // need to give bombLocations an additional class of bomblocation
 
@@ -104,16 +105,75 @@ console.log(bombLocations);
 // rightClick call back function
 const leftClick = (event) => {
     console.log(event.target.id);
-    // I need to check if the event.target.id = bombLocations vlaue
-        // then game over
 
+    if (bombLocations.includes(event.target.id)) {
+        
+        // event.target.classList.add('bombClicked');
+        // event.target.textContent = '💣';
+
+        console.log('theres a bomb here');
+
+        findAllBombs();
+
+        // stopTimer();
+
+    } else {
+        console.log('no bomb here');
+
+        let emptySquare 
+    }
 
 };
 
 // add right click event listener for the gameGrid with callback function
 gameGrid.addEventListener("click", leftClick);
 
+// findAllBombs -------------------------------------------
 
-// .bombClicked
+function findAllBombs() {
+    
+    bombLocations.forEach(id => {
+        const bombSquares = document.getElementById(id);
+
+        bombSquares.classList.add('bombClicked');
+        bombSquares.textContent  = '💣';
+    });
+}
+
 // .numClicked
 // .emptySquare
+
+
+// reset button -----------------------------------------
+
+const resetButton = document.querySelector('.reset-button');
+
+resetButton.addEventListener('click', function() {
+    location.reload();
+});
+
+
+
+// timer ---------------------------------------------------
+
+const firstClick = document.querySelector('#grid')
+
+function startTimer() {
+    console.log('startTimer');
+
+
+    const timerSec = setInterval(() => {
+        const timer = document.querySelector('.timer');
+
+        timer.textContent++;
+
+    }, 1000);
+
+    firstClick.removeEventListener('click', startTimer);
+};
+
+// function stopTimer() {
+//     clearInterval(setInterval);
+// };
+
+firstClick.addEventListener('click', startTimer);
