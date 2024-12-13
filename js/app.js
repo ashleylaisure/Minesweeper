@@ -136,8 +136,8 @@ const leftClick = (event) => {
 
         whatsAroundMe(rowNum, columnNum);
 
-        const thisIsMe = document.getElementById(event.target.id);
-        console.dir(thisIsMe);
+        // const thisIsMe = document.getElementById(event.target.id);
+        // console.dir(thisIsMe);
         
         
         // clickedSquare(thisIsMe);
@@ -170,12 +170,17 @@ function findAllBombs() {
 function whatsAroundMe(row, column) {
     const aroundMe = [];
 
-    // the square is on the top row 
-    // if ( row === 0 || row === 9 || column === 0 || column === 9 ) {
-    //     return;
+    // who am I???
+    const mySquare = document.getElementById(`${row}${column}`);
+    console.dir(mySquare);
 
-    // } else {
-        
+
+    
+    if ( row < 0 || row >= 10 || column < 0 || column >= 10  ){
+            return;
+    } else if ( mySquare.classList.contains('numClicked') || mySquare.classList.contains('emptySquare') ) {
+        return;
+    } else {
 
     // TOP
     console.log(row-1, column-1)
@@ -216,43 +221,52 @@ function whatsAroundMe(row, column) {
 
     console.log(aroundMe)
     
-    // check whats aroundMe for bombLocations
-    let myNumber = 0;
+    // WHATS my NUMBER??????-----------------------------------------
 
-    for (i of aroundMe) {
-        if(bombLocations.includes(i)) {
-            myNumber++;
+        let myNumber = 0;
+
+        for (i of aroundMe) {
+            if(bombLocations.includes(i)) {
+                myNumber++;
+            }
         }
+
+        console.log(myNumber)
+
+    // Asign me
+
+        if (myNumber >= 1) {
+            mySquare.classList.add('numClicked')
+            mySquare.textContent = myNumber
+
+            return; 
+
+        } if (myNumber === 0) {
+            mySquare.classList.add('emptySquare')
+
+            // run the function for all 8 squares surrounding me 
+            // whatsAroundMe(row, column)
+
+            // TOP
+            whatsAroundMe(row-1, column-1);
+            whatsAroundMe(row-1, column);
+            whatsAroundMe(row-1, column+1);
+
+            // bottom
+            whatsAroundMe(row+1, column-1);
+            whatsAroundMe(row+1, column);
+            whatsAroundMe(row+1, column+1);
+
+            // to the left
+            whatsAroundMe(row, column-1);
+
+            // to the right
+            whatsAroundMe(row, column+1);
+
     }
-
-    console.log(myNumber)
-
-    const mySquare = document.getElementById(`${row}${column}`);
-    console.dir(mySquare);
-
-    if (myNumber > 0) {
-        mySquare.classList.add('numClicked')
-        mySquare.textContent = myNumber
-    } else {
-        mySquare.classList.add('emptySquare')
     }
-
 };
-// function clickedSquare(id) {
 
-//     let num = findmyNum()
-
-//     const id = document.getElementById(id)
-//     console.dir(id);
-
-//     if (num > 0) {
-//         id.classList.add('numClicked');
-//         id.textContent = `${num}`
-//     } else if (numm === 0 ) {
-//         id.classList.add('emptySquare');
-//     }
-
-// }
 
 // reset button -----------------------------------------
 

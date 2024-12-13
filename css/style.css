@@ -118,16 +118,10 @@ h1 {
 
 .numClicked {
     background-color: rgb(233, 216, 166);
+    font-size: 25px;
 }
 
 .emptySquare {
     background-color: rgb(10, 147, 150);
+    font-size: 25px;
 }
-/* #num1
-#num2
-#num3
-#num4
-#num5
-#num6
-#num7
-#num8 */
