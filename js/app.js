@@ -6,11 +6,11 @@ const gameGrid = document.querySelector('#grid');
 let rows = 10;
 let columns = 10;
 
-let bombs = 10;
+let bombs = 5;
 
 const gridArray = [];
-
-
+const myFlags = [];
+const didIWin = [];
 
 for (let i = 0; i < rows; i++) {
     for (let j = 0; j < columns; j++) {
@@ -38,11 +38,11 @@ console.log(gameGrid);
 
 console.log(gridArray);
 
+console.log(didIWin)
+
 
 // ---------------------------------------------------------------------------
 // Right click on squares to mark with flags
-
-// let bombs = 10;
 
 const flagCountdown = document.querySelector('.bomb-counter')
 console.dir(flagCountdown);
@@ -53,31 +53,32 @@ flagCountdown.textContent = bombs;
 const rightClick = (event) => {
     // prevent the default menu from appearing
     event.preventDefault();
-    if (event.target.textContent === '') {
-        // change textContent to flag
-        event.target.textContent = '🚩'
-        // decrease flag counter
+
+    if (bombs > 0) {
+        if (event.target.classList.contains('numClicked') || event.target.classList.contains('emptySquare') )  {
+            return;
+
+        } else if (event.target.classList.contains('flagSquare') ){
+            event.target.classList.remove('flagSquare')
         
-        // when there are 0 flags left
-        if (bombs >= 0) {
+            myFlags.splice(myFlags.indexOf(event.target.id), 1)
+            console.log(myFlags)
+
+            bombs = bombs + 1;
+            flagCountdown.textContent = bombs;
+
+        } else {
+            event.target.classList.add('flagSquare')
+
+            myFlags.push(event.target.id)
+            console.log(myFlags);
+
             bombs = bombs - 1;
             flagCountdown.textContent = bombs;
-        } if (bombs < 0 && event.target.textContent === '🚩') {
-            event.target.textContent = ''
-            bombs++;
-            flagCountdown.textContent = bombs;
-        } else if (bombs < 0 ) {
-            // gameGrid.removeEventListener("contextmenu", rightClick);
-            return
         }
-    } else if (event.target.textContent === '🚩'){
-        event.target.textContent = ''
-        bombs++;
-        flagCountdown.textContent = bombs;
-    }
+    };
 
-};
-
+}
 // add right click event listener for the gameGrid with callback function
 gameGrid.addEventListener("contextmenu", rightClick);
 
@@ -117,8 +118,15 @@ const leftClick = (event) => {
         findAllBombs();
 
         gameGrid.removeEventListener('click', leftClick);
+        gameGrid.removeEventListener("contextmenu", rightClick);
         
         stopTimer();
+
+        const loser = document.querySelector('h1')
+        loser.textContent = "Better Luck Next Time";
+
+        // window.alert("Better Luck Next Time!")
+
 
     } else {
         console.log('no bomb here');
@@ -138,10 +146,21 @@ const leftClick = (event) => {
 
         // const thisIsMe = document.getElementById(event.target.id);
         // console.dir(thisIsMe);
+
+        if ( didIWin.length + myFlags.length === 100) {
+            gameGrid.removeEventListener('click', leftClick);
+            gameGrid.removeEventListener("contextmenu", rightClick);
         
-        
-        // clickedSquare(thisIsMe);
-        
+            stopTimer();
+
+            const winner = document.querySelector('h1')
+            winner.textContent = "You are a Mineseeper!"
+            // window.alert("Congradulations you are a Minesweeper!")
+        } else {
+            return;
+        }
+
+    
     } 
         
 
@@ -170,6 +189,8 @@ function findAllBombs() {
 function whatsAroundMe(row, column) {
     const aroundMe = [];
 
+    
+
     // who am I???
     const mySquare = document.getElementById(`${row}${column}`);
     console.dir(mySquare);
@@ -177,7 +198,7 @@ function whatsAroundMe(row, column) {
 
     
     if ( row < 0 || row >= 10 || column < 0 || column >= 10  ){
-            return;
+        return;
     } else if ( mySquare.classList.contains('numClicked') || mySquare.classList.contains('emptySquare') ) {
         return;
     } else {
@@ -239,10 +260,16 @@ function whatsAroundMe(row, column) {
             mySquare.classList.add('numClicked')
             mySquare.textContent = myNumber
 
+            didIWin.push(`${row}${column}`)
+            console.log(didIWin)
+
             return; 
 
         } if (myNumber === 0) {
             mySquare.classList.add('emptySquare')
+
+            didIWin.push(`${row}${column}`)
+            console.log(didIWin)
 
             // run the function for all 8 squares surrounding me 
             // whatsAroundMe(row, column)
@@ -276,8 +303,6 @@ resetButton.addEventListener('click', function() {
     location.reload();
 });
 
-
-
 // timer ---------------------------------------------------
 
 const firstClick = document.querySelector('#grid')
@@ -296,10 +321,10 @@ function startTimer() {
     firstClick.removeEventListener('click', startTimer);
 };
 
+firstClick.addEventListener('click', startTimer);
+
 function stopTimer() {
     console.log('stopTimer');
 
     clearInterval(timerSec);
 };
-
-firstClick.addEventListener('click', startTimer);
