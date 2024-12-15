@@ -68,7 +68,8 @@ const rightClick = (event) => {
             
             updateCountdown();
 
-        } else {
+        } 
+        else if (myFlags.length < 15 ) {
 
             event.target.classList.add('flagSquare')
             event.target.textContent = "🚩"
@@ -77,7 +78,8 @@ const rightClick = (event) => {
             console.log(myFlags);
 
             updateCountdown();
-        }
+        } 
+
 };
 
 function updateCountdown() {
