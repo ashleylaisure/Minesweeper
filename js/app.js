@@ -6,7 +6,7 @@ const gameGrid = document.querySelector('#grid');
 let rows = 10;
 let columns = 10;
 
-let bombs = 5;
+let bombs = 15;
 
 const gridArray = [];
 const myFlags = [];
@@ -54,44 +54,59 @@ const rightClick = (event) => {
     // prevent the default menu from appearing
     event.preventDefault();
 
-    if (bombs > 0) {
+    
         if (event.target.classList.contains('numClicked') || event.target.classList.contains('emptySquare') )  {
             return;
-
-        } else if (event.target.classList.contains('flagSquare') ){
-            event.target.classList.remove('flagSquare')
+        } 
         
-            myFlags.splice(myFlags.indexOf(event.target.id), 1)
+        if (event.target.classList.contains('flagSquare') ) {
+            event.target.classList.remove('flagSquare')
+            event.target.textContent = ""
+        
+            myFlags.splice(myFlags.indexOf(event.target.id), 1);
             console.log(myFlags)
-
-            bombs = bombs + 1;
-            flagCountdown.textContent = bombs;
+            
+            updateCountdown();
 
         } else {
+
             event.target.classList.add('flagSquare')
+            event.target.textContent = "🚩"
 
             myFlags.push(event.target.id)
             console.log(myFlags);
 
-            bombs = bombs - 1;
-            flagCountdown.textContent = bombs;
+            updateCountdown();
         }
-    };
+};
 
-}
+function updateCountdown() {
+    const flags = document.querySelectorAll('.flagSquare');
+
+    const flagsUsed = flags.length;
+
+    console.log(flagsUsed);
+
+    flagCountdown.textContent = bombs - flagsUsed
+};
+
+
+
 // add right click event listener for the gameGrid with callback function
 gameGrid.addEventListener("contextmenu", rightClick);
 
 // Randomly select where Bombs are located ----------------------------------------------------
 const bombLocations = [];
 
-for (let i = 0; i < bombs; i++) {
+let numberbombs = 15
+
+for (let i = 0; i < numberbombs; i++) {
     let row = Math.floor(Math.random() * 10);
     let column = Math.floor(Math.random() * 10);
 
     if (bombLocations.includes(`${row}${column}`)) {
         
-        bombs++;
+        numberbombs++;
 
         continue;
     } 
@@ -123,7 +138,7 @@ const leftClick = (event) => {
         stopTimer();
 
         const loser = document.querySelector('h1')
-        loser.textContent = "Better Luck Next Time";
+        loser.textContent = "Better Luck Next Time 😵‍💫";
 
         // window.alert("Better Luck Next Time!")
 
@@ -154,7 +169,7 @@ const leftClick = (event) => {
             stopTimer();
 
             const winner = document.querySelector('h1')
-            winner.textContent = "You are a Mineseeper!"
+            winner.textContent = "You're a Mineseeper! 🥳"
             // window.alert("Congradulations you are a Minesweeper!")
         } else {
             return;
