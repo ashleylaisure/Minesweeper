@@ -21,70 +21,55 @@
 <body>
     <h1>MINESSWEEPER</h1> 
     
-    
+
 
     <div class = "popUp">
         <div class = "instructions">
-            
             <div class ="close">✖</div>
-
-            <h4>How To Play</h4>
-
+            <h4>How To Play Minessweeper:</h4>
             <div>
-                <p>Minsesweeper is a logic puzzle game </p>
-
-                <p> The board has hidden mines scatterd accross it, your job is to avoid them</p>
-
+                <p>Minsesweeper is a logic game with hidden mines scattered across the board. It's your job to avoid them. </p>
                 <ul>
-                    <li>Click on a square to reveal what's underneath</li>
-                    <li>If the square is empty, it will reveal a number or nothing</li>
-                    <li>If the square contains a mine, the game ends and you lose</li>
-                    <li>The number represents how many mines are in the surrounding 8 squares</li>
+                    <li>Click on a square to reveal what's underneath.</li>
+                    <li>If the square contains a mine, the game ends and you lose.</li>
+                    <li>If the square doesn't contain a mine, it will reveal a number or nothing.</li>
+                    <li>If the square has a number, this number represents how many mines are in the neighboring 8 squares.</li>
                 </ul>
-                
-                <ol>
-                    <li>Start by clicking randomly</li>
-                    <li>Use the numbers as clues as to how many mines are in the surrounding 8 squares</li>
-                    <li>Right Click to place a flag where you think a mine is</li>
-                    <li>The mines counter will decrease with each potional mine avoided</li>
-                    <li>You win when all safe squares are uncoverd and all mines have been flagged</li>
+                <ul>
+                    <li>Start by clicking randomly.</li>
+                    <li>Use the numbers as clues as to how many mines are in the surrounding 8 squares.</li>
+                    <li>Right Click to place a flag where you think a mine is located.</li>
+                    <li>The mines counter will decrease with each potional mine avoided.</li>
+                    <li>You win when all safe squares are uncoverd and all mines have been flagged.</li>
                     
-                </ol>
+                </ul>
             </div>
-
-            
-
-
-
         </div>
-
     </div>
 
+
+
     <div class = "navigation-key">
-        
         <div id = "key">
             <p >MINES</p>
             <p >RESET </p>
             <p >TIMER</p>
-
         </div>
-
         <a href ="#" class ="instuctionsButton"> How To Play</a>
-
     </div>
 
+
+    
     <div class = "board">
-
         <div class = "navigation">
-
             <div class = "bomb-counter"></div>
-
             <button class = "reset-button" type="button">😍</button>
-
             <div class = "timer">000</div>
         </div>
-
         <div id ='grid'></div>
     </div>
+
+
+
 </body>
 </html>
