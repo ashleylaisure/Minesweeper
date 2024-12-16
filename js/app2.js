@@ -364,16 +364,3 @@ function stopTimer() {
 
     clearInterval(timerSec);
 };
-
-const instructions = document.querySelector('.instuctionsButton')
-const popUp = document.querySelector('.popUp')
-
-instructions.addEventListener('click', function() {
-    popUp.style.display = 'flex';
-});
-
-const closeInstructions = document.querySelector('.close')
-
-closeInstructions.addEventListener('click', function(){
-    popUp.style.display = 'none';
-});

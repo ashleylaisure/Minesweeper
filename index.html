@@ -12,22 +12,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poiret+One&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h1>MINESSWEEPER</h1>
+    <h1>MINESSWEEPER</h1> 
+    
+    
+
+    <div class = "popUp">
+        <div class = "instructions">
+            
+            <div class ="close">✖</div>
+
+            <h4>How To Play</h4>
+
+            <div>
+                <p>Minsesweeper is a logic puzzle game </p>
+
+                <p> The board has hidden mines scatterd accross it, your job is to avoid them</p>
+
+                <ul>
+                    <li>Click on a square to reveal what's underneath</li>
+                    <li>If the square is empty, it will reveal a number or nothing</li>
+                    <li>If the square contains a mine, the game ends and you lose</li>
+                    <li>The number represents how many mines are in the surrounding 8 squares</li>
+                </ul>
+                
+                <ol>
+                    <li>Start by clicking randomly</li>
+                    <li>Use the numbers as clues as to how many mines are in the surrounding 8 squares</li>
+                    <li>Right Click to place a flag where you think a mine is</li>
+                    <li>The mines counter will decrease with each potional mine avoided</li>
+                    <li>You win when all safe squares are uncoverd and all mines have been flagged</li>
+                    
+                </ol>
+            </div>
+
+            
+
+
+
+        </div>
+
+    </div>
 
     <div class = "navigation-key">
-        <p id = "key">
-            MINES
-        </p>
+        
+        <div id = "key">
+            <p >MINES</p>
+            <p >RESET </p>
+            <p >TIMER</p>
 
-        <p id = "key">
-            RESET
-        </p>
+        </div>
 
-        <p id = "key">
-            TIMER
-        </p>
+        <a href ="#" class ="instuctionsButton"> How To Play</a>
+
     </div>
 
     <div class = "board">
