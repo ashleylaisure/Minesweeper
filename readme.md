@@ -10,7 +10,7 @@
 
 <!-- <img src="https://vimeo.com/1039776548?share=copy#t=0" style="width:100vw; height:100vh" alt="Sample of Game Play"/> -->
 
-<iframe src="https://player.vimeo.com/video/1039776548?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="600" height="600" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Minesweeper" alt="Video of playing the game"></iframe>
+<!-- <iframe src="https://player.vimeo.com/video/1039776548?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="600" height="600" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Minesweeper" alt="Video of playing the game"></iframe> -->
 
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/9r-llQAVbIg?si=rdHJybMpo9DqyZ1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
