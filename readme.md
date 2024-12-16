@@ -10,7 +10,7 @@
 
 <!-- <img src="https://vimeo.com/1039776548?share=copy#t=0" style="width:100vw; height:100vh" alt="Sample of Game Play"/> -->
 
-<iframe src="https://player.vimeo.com/video/1039776548?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="600" height="600" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Minesweeper"></iframe>
+<!-- <iframe src="https://player.vimeo.com/video/1039776548?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="600" height="600" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Minesweeper"></iframe> -->
 
 ## Description
 Minesweeper is a game where mines are hidden in a grid of squares. The object of the game is to clear the board without selecting a mine. Each square is designated a number that represents the amount of mines located in the 8 squares surrounding it. Using this information the user must navigate around the board placing down flags (with a right-click) where they think mines are located. The user wins when all squares have either been flagged or opened. 
@@ -53,7 +53,7 @@ Minesweeper is a game where mines are hidden in a grid of squares. The object of
 * Create a leaderboard to record the time the game was completed
 
 ## <a name="deployment"></a>Deployed Link
-[Github Pages]([https://ashleylaisure.github.io/Minessweeper/])
+[Github Pages](https://ashleylaisure.github.io/Minessweeper/)
 
 * You can view the repository:
 [Github.com](https://github.com/ashleylaisure/Minessweeper)
@@ -75,4 +75,4 @@ https://unicode.org/emoji/charts/full-emoji-list.html
 
 https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/
 
-* Making the Timer function I referenced this article on freecodecamp
+* Making the timer function I referenced this article on freecodecamp
