@@ -6,11 +6,13 @@
 
 <img src="https://i.ibb.co/0VzBdgG/Screenshot-2024-12-16-143411.png" alt="Developed minesweeper game"/>
 
-<!-- <img src="https://drive.google.com/file/d/1aThglqg1Ax_ZpQL3qhFWtlBVPEZtE913/view?usp=drive_link" style="width:100vw; height:100vh" alt="Text describing your video"/> -->
+<img src="https://vimeo.com/1039776548" style="width:100vw; height:100vh" alt="Video of playing the game"/>
 
 <!-- <img src="https://vimeo.com/1039776548?share=copy#t=0" style="width:100vw; height:100vh" alt="Sample of Game Play"/> -->
 
 <!-- <iframe src="https://player.vimeo.com/video/1039776548?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="600" height="600" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Minesweeper"></iframe> -->
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/9r-llQAVbIg?si=rdHJybMpo9DqyZ1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
 ## Description
 Minesweeper is a game where mines are hidden in a grid of squares. The object of the game is to clear the board without selecting a mine. Each square is designated a number that represents the amount of mines located in the 8 squares surrounding it. Using this information the user must navigate around the board placing down flags (with a right-click) where they think mines are located. The user wins when all squares have either been flagged or opened. 
@@ -63,16 +65,23 @@ Minesweeper is a game where mines are hidden in a grid of squares. The object of
 After countless hours mastering Minesweeper as a teenager, I discovered my passion for problem-solving and creativity. This led me to the exciting challenge of developing my own version of the classic game. Whether I’m diving into code or exploring new ideas, I’m driven by a love for innovation and the joy of creating experiences that others can enjoy.
     
 ## Works Cited:
-https://developer.mozilla.org/en-US/docs/Glossary/Recursion
-https://www.freecodecamp.org/news/recursion-in-javascript/
+Minesweeper includes a flood feature: when a square with zero bombs around it is revealed, the flood mechanism is triggered. This causes the program to recursively call itself, revealing the surrounding squares. The process continues until it reaches a boundary of numbered squares surrounding the initial square.
 
-* Minesweeper includes a flood feature: when a square with zero bombs around it is revealed, the flood mechanism is triggered. This causes the program to recursively call itself, revealing the surrounding squares. The process continues until it reaches a boundary of numbered squares surrounding the initial square.
-* Additional research was done to understand how to write a recursive function.
+Additional research was done to understand how to write a recursive function.
 
-https://unicode.org/emoji/charts/full-emoji-list.html
+* https://developer.mozilla.org/en-US/docs/Glossary/Recursion
+* https://www.freecodecamp.org/news/recursion-in-javascript/
 
-* Emoji's used were copied and pasted from the Unicode site
 
-https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/
+Emoji's used were copied and pasted from the Unicode site.
 
-* Making the timer function I referenced this article on freecodecamp
+* https://unicode.org/emoji/charts/full-emoji-list.html
+
+
+While making the timer function I referenced this article on freecodecamp.
+
+* https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/
+
+I wanted to add a popup modal to the navigation of the game so that users could read instructions to play the game. This YouTube video was extremely helpful in understanding how to hide elements that become available with an event listener. 
+
+-   https://www.youtube.com/watch?v=gLWIYk0Sd38
