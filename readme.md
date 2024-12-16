@@ -8,7 +8,9 @@
 
 <!-- <img src="https://drive.google.com/file/d/1aThglqg1Ax_ZpQL3qhFWtlBVPEZtE913/view?usp=drive_link" style="width:100vw; height:100vh" alt="Text describing your video"/> -->
 
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1039776548?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Minesweeper"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<!-- <img src="https://vimeo.com/1039776548?share=copy#t=0" style="width:100vw; height:100vh" alt="Sample of Game Play"/> -->
+
+<iframe src="https://player.vimeo.com/video/1039776548?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="600" height="600" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Minesweeper"></iframe>
 
 ## Description
 Minesweeper is a game where mines are hidden in a grid of squares. The object of the game is to clear the board without selecting a mine. Each square is designated a number that represents the amount of mines located in the 8 squares surrounding it. Using this information the user must navigate around the board placing down flags (with a right-click) where they think mines are located. The user wins when all squares have either been flagged or opened. 
@@ -61,11 +63,16 @@ Minesweeper is a game where mines are hidden in a grid of squares. The object of
 After countless hours mastering Minesweeper as a teenager, I discovered my passion for problem-solving and creativity. This led me to the exciting challenge of developing my own version of the classic game. Whether I’m diving into code or exploring new ideas, I’m driven by a love for innovation and the joy of creating experiences that others can enjoy.
     
 ## Works Cited:
-*https://stackoverflow.com/questions/24093290/what-does-the-question-mark-mean-in-javascript/24093304
-*https://www.w3schools.com/jquery/jquery_ref_events.asp
-*Understanding “this” in JQUERY: 
-* 	the this object doesn't change. It is the owner of the function. It is, in most cases like this, simply a node and you can reference all of its properties like this.className. (think of it as you would a node or whatnot that you get with document.getElementById). It is just the "owner" of the function. Therefore, you are just passing the this object to jQuery's $(). Conclusion: If you want to use jQuery functions for the current node, use $(this). But if you want to access the objects own properties (e.g. .name, className, .id), use simply this.
-- https://stackoverflow.com/questions/8469635/jquery-when-to-use-this-and-when-to-use-this
+https://developer.mozilla.org/en-US/docs/Glossary/Recursion
+https://www.freecodecamp.org/news/recursion-in-javascript/
 
-* A constructor: A constructor in Java is a block of code similar to a method that's called when an instance of an object is created. Here are the key differences between aconstructor and a method: A constructor doesn't have a return type. ... Unlike methods, constructorsare not considered members of a class.
-- https://www.w3schools.com/java/java_constructors.asp
+* Minesweeper includes a flood feature: when a square with zero bombs around it is revealed, the flood mechanism is triggered. This causes the program to recursively call itself, revealing the surrounding squares. The process continues until it reaches a boundary of numbered squares surrounding the initial square.
+* Additional research was done to understand how to write a recursive function.
+
+https://unicode.org/emoji/charts/full-emoji-list.html
+
+* Emoji's used were copied and pasted from the Unicode site
+
+https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/
+
+* Making the Timer function I referenced this article on freecodecamp
