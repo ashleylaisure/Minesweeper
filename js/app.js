@@ -98,7 +98,7 @@ const rightClick = (event) => {
                 stopTimer();
     
                 const winner = document.querySelector('h1')
-                winner.textContent = "YOU'RE A MINESSEEPER! 🥳"
+                winner.textContent = "YOU'RE A MINESWEEPER! 🥳"
             } else {
                 return;
             }
@@ -167,7 +167,7 @@ const leftClick = (event) => {
             stopTimer();
 
             const winner = document.querySelector('h1')
-            winner.textContent = "YOU'RE A MINESSEEPER! 🥳"
+            winner.textContent = "YOU'RE A MINESWEEPER! 🥳"
             
         } else {
             return;
