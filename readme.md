@@ -53,10 +53,10 @@ Minesweeper is a game where mines are hidden in a grid of squares. The object of
 * Create a leaderboard to record the time the game was completed
 
 ## <a name="deployment"></a>Deployed Link
-[Github Pages](https://ashleylaisure.github.io/Minessweeper/)
+[Github Pages](https://ashleylaisure.github.io/Minesweeper/)
 
 * You can view the repository:
-[Github.com](https://github.com/ashleylaisure/Minessweeper)
+[Github.com](https://github.com/ashleylaisure/Minesweeper)
 * If unable to view please go live locally through VS Code
 
 ## <a name="author"></a>About The Author
