@@ -78,9 +78,11 @@ Emoji's used were copied and pasted from the Unicode site.
 * https://unicode.org/emoji/charts/full-emoji-list.html
 
 
-While making the timer function I referenced this article on freecodecamp.
+While making the timer function I referenced these websites.
 
 * https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/
+* https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval
+* https://www.google.com/search?q=interval+timer+in+javascript&sca_esv=59d83465afa8625f&sxsrf=ADLYWILHo3AG_2Ti4M81b_keZUm22PeT-g%3A1734394247417&ei=h8FgZ8-OGaCe5NoPtO622QE&oq=interval+timer+in+jav&gs_lp=Egxnd3Mtd2l6LXNlcnAiFWludGVydmFsIHRpbWVyIGluIGphdioCCAAyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjWGlDJAVjdDXABeAGQAQCYAVOgAZIEqgEBN7gBAcgBAPgBAZgCCKACrQTCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICChAAGIAEGEMYigXCAgUQABiABMICChAAGIAEGBQYhwLCAgcQABiABBgKmAMAiAYBkAYKkgcBOKAH5TA&sclient=gws-wiz-serp 
 
 I wanted to add a popup modal to the navigation of the game so that users could read instructions to play the game. This YouTube video was extremely helpful in understanding how to hide elements that become available with an event listener. 
 
