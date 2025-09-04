@@ -318,11 +318,12 @@ function stopTimer() {
 // instructions Pop Up Functions-----------------------------------------------------------------------------
 const instructions = document.querySelector('.instuctionsButton')
 const popUp = document.querySelector('.popUp')
-
+// open
 instructions.addEventListener('click', function() {
     popUp.style.display = 'flex';
 });
 
+// close
 const closeInstructions = document.querySelector('.close')
 
 closeInstructions.addEventListener('click', function(){

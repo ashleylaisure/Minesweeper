@@ -1,89 +1,118 @@
-# Minesweeper
+<!-- Title -->
+# 🕹️ Minesweeper
 
-#### Minesweeper is a logic-based game where the goal is to reveal all the squares on the board without triggering any hidden mines.
+<!-- Subtitle -->
+#### A modern take on the classic logic-based puzzle game — clear the board without triggering hidden mines!
 
-<img src="https://cdn.mos.cms.futurecdn.net/f873f2282e16faeebdb4a09e2f3cef32.jpg" alt="original minesweeper game"/>
+<!-- badges/ Icons https://simpleicons.org/-->
+### 🚀 Tech Stack
+<p>
+<img src="https://img.shields.io/badge/-HTML5-black?style=for-the-badge&logoColor=white&logo=html5&color=E34F26" alt="html5" />
 
-<img src="https://i.ibb.co/0VzBdgG/Screenshot-2024-12-16-143411.png" alt="Developed minesweeper game"/>
+<img src="https://img.shields.io/badge/-CSS-black?style=for-the-badge&logoColor=white&logo=css&color=663399" alt="css" />
 
-<!-- <img src="https://vimeo.com/1039776548" style="width:100vw; height:100vh" alt="Video of playing the game"/> -->
+<img src="https://img.shields.io/badge/-javascript-black?style=for-the-badge&logoColor=white&logo=javascript&color=F7DF1E" alt="JavaScript" />
 
-<!-- <img src="https://vimeo.com/1039776548?share=copy#t=0" style="width:100vw; height:100vh" alt="Sample of Game Play"/> -->
+<img src="https://img.shields.io/badge/-githubpages-black?style=for-the-badge&logoColor=white&logo=github&color=181717" alt="github pages" />
+</p>
 
-<!-- <iframe src="https://player.vimeo.com/video/1039776548?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="600" height="600" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Minesweeper" alt="Video of playing the game"></iframe> -->
+<!-- images of app (inc. logo  homepage etc.)-->
+### 🎮 Gameplay Preview
+Original Minesweeper (inspiration):
+<img src="https://cdn.mos.cms.futurecdn.net/f873f2282e16faeebdb4a09e2f3cef32.jpg" alt="Original Minesweeper" width="400"/>
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/9r-llQAVbIg?si=rdHJybMpo9DqyZ1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+My version (developed with HTML, CSS, and JavaScript):
+<img src="https://i.ibb.co/0VzBdgG/Screenshot-2024-12-16-143411.png" alt="Developed minesweeper game" width="400"/>
 
-## Description
-Minesweeper is a game where mines are hidden in a grid of squares. The object of the game is to clear the board without selecting a mine. Each square is designated a number that represents the amount of mines located in the 8 squares surrounding it. Using this information the user must navigate around the board placing down flags (with a right-click) where they think mines are located. The user wins when all squares have either been flagged or opened. 
+<!-- ## 🌐 Demo video?
 
-## Table of Contents
-* [Technologies Used](#technologiesused)
-* [Features](#features)
-* [Design](#design)
-* [Project Next Steps](#nextsteps)
-* [Deployed App](#deployment)
-* [About the Author](#author)
+Here is a live demo of CarePulse in action: [CarePulse Demo](https://carepulse-demo.com)
 
-## <a name="technologiesused"></a>Technologies Used
-* JavaScript
+![CarePulse Demo](https://carepulse-demo.com/demo-screenshot.png) -->
+
+## 📖 Description
+
+Minesweeper is a grid-based puzzle game where some squares hide mines. The objective is simple: clear the entire board without clicking on a mine.
+
+Each revealed square shows a number that indicates how many mines are hidden in the 8 surrounding cells. Players must use logic to avoid danger, placing 🚩 flags where they suspect mines are hidden. Victory comes when every safe square is uncovered or all mines are flagged.
+
+## 📚 Table of Contents
+* 🛠  [Technologies Used](#technologiesused)
+* ✨ [Features](#features)
+* 📋 [Planning](#planning)
+* 🎨 [Design](#design)
+* ✅ [Next Steps](#nextsteps)
+* 🌍 [Deployment](#deployment)
+* 👋 [Author](#author)
+* 📜 [Attributions](#attributions)
+
+## <a name="technologiesused"></a>🛠 Technologies Used
 * HTML5
-* CSS3
+* CSS3 (Flexbox & Grid for layout)
+* JavaScript (DOM manipulation, recursion, timer)
 
 
-## Features
-* Mines counter - reflects the number of mines hidden on the board, reduces as the mines have been flagged 
-* Emoji - reset button 
-* Timer - counting time spent on the game
-* Right Click - placing a flag on the square
-* Left Click - revealing the square 
+## <a name="features"></a>✨Features
+Here are the key features of Minesweeper:
+
+- **💣  Mines counter**
+    Reflects the number of mines hidden on the board, and decreases as mines are identified.
+
+- **😍  reset button**
+    Quickly restart with a fresh randomized board.
+
+- **⏲   Timer**
+    Tracks how long each game lasts.
+
+- **🚩 Flag**
+    Right-click to mark suspected mines.
+
+- **🔢 Open Square**
+    Left-click to reveal safe cells
+
+- **🌊 Flood Reveal**
+    Automatically uncover emapty areas when a zero cell is clicked
+
+## <a name="planning"></a>📋 Planning
+###### View my Notion planning board [↗](https://www.notion.so/Minesweeper-158133426c96816a9f9cf23fb9071e41?pvs=4)
+
+## <a name="design"></a>🎨 Design
+For the design of my Minesweeper, I decided to divert from the traditional gray colorway and went with a blue/green look.
+
+### Wireframe Image
+<img src="https://i.ibb.co/sgrXXhF/Screenshot-2024-12-09-195540.png" width="400"/>
 
 
-## Wireframe Images
-<img src="https://i.ibb.co/sgrXXhF/Screenshot-2024-12-09-195540.png">
+## <a name="nextsteps"></a>✅ Project Next Steps
+Here’s a list of ongoing tasks and planned features for the project:
 
-## Notion Planning
-* https://www.notion.so/Minesweeper-158133426c96816a9f9cf23fb9071e41?pvs=4
-
-## <a name="design"></a>Design
-* For the design of my Minesweeper, I decided to divert from the traditional gray colorway and went with a blue/green look.
+- [ ] Difficulty levels (easy/medium/hard) with different board sizes & mine counts.
+- [ ] Global leaderboard to record and compare completion times.
 
 
-## <a name="nextsteps"></a>Project Next Steps
-#### List of Future Features
-* Allow the user to select the difficulty level - changing the board size and amount of mines 
-* Create a leaderboard to record the time the game was completed
+## <a name="deployment"></a>🌍 Deployed Link
+[🎯 Play the Game (GitHub Pages)](https://ashleylaisure.github.io/Minesweeper/)
 
-## <a name="deployment"></a>Deployed Link
-[Github Pages](https://ashleylaisure.github.io/Minesweeper/)
+[📂 View the Repository](https://github.com/ashleylaisure/Minesweeper)
 
-* You can view the repository:
-[Github.com](https://github.com/ashleylaisure/Minesweeper)
-* If unable to view please go live locally through VS Code
 
-## <a name="author"></a>About The Author
-After countless hours mastering Minesweeper as a teenager, I discovered my passion for problem-solving and creativity. This led me to the exciting challenge of developing my own version of the classic game. Whether I’m diving into code or exploring new ideas, I’m driven by a love for innovation and the joy of creating experiences that others can enjoy.
+## <a name="author"></a>👋 Author
+Hi, I’m Ashley Laisure 👋
+
+After countless hours mastering Minesweeper as a teenager, I rediscovered the thrill of its logic and challenge through coding. Rebuilding this game let me merge my love of problem-solving with my creativity for design. Whether writing code or imagining new features, I enjoy creating projects that are fun, interactive, and rewarding to play.
     
-## Works Cited:
-Minesweeper includes a flood feature: when a square with zero bombs around it is revealed, the flood mechanism is triggered. This causes the program to recursively call itself, revealing the surrounding squares. The process continues until it reaches a boundary of numbered squares surrounding the initial square.
+## <a name="attributions"></a>📜 Attributions
+This project uses recursion for the flood-fill mechanic (revealing multiple squares when no surrounding mines are detected). Helpful resources included:
 
-Additional research was done to understand how to write a recursive function.
+- [Recursion in JavaScript (MDN)](https://developer.mozilla.org/en-US/docs/Glossary/Recursion)
+- [FreeCodeCamp – Recursion Guide](https://www.freecodecamp.org/news/recursion-in-javascript/)
 
-* https://developer.mozilla.org/en-US/docs/Glossary/Recursion
-* https://www.freecodecamp.org/news/recursion-in-javascript/
+Additional resources: 
 
+* [FreeCodeCamp - Set timeout](https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/)
+* [MDN setInterval](https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval)
+* [JS Timer Functions](https://www.google.com/search?q=interval+timer+in+javascript&sca_esv=59d83465afa8625f&sxsrf=ADLYWILHo3AG_2Ti4M81b_keZUm22PeT-g%3A1734394247417&ei=h8FgZ8-OGaCe5NoPtO622QE&oq=interval+timer+in+jav&gs_lp=Egxnd3Mtd2l6LXNlcnAiFWludGVydmFsIHRpbWVyIGluIGphdioCCAAyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjWGlDJAVjdDXABeAGQAQCYAVOgAZIEqgEBN7gBAcgBAPgBAZgCCKACrQTCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICChAAGIAEGEMYigXCAgUQABiABMICChAAGIAEGBQYhwLCAgcQABiABBgKmAMAiAYBkAYKkgcBOKAH5TA&sclient=gws-wiz-serp)
 
-Emoji's used were copied and pasted from the Unicode site.
+* [YouTube – Event Listener Modal Tutorial](https://www.youtube.com/watch?v=gLWIYk0Sd38)
 
-* https://unicode.org/emoji/charts/full-emoji-list.html
-
-
-While making the timer function I referenced these websites.
-
-* https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/
-* https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval
-* https://www.google.com/search?q=interval+timer+in+javascript&sca_esv=59d83465afa8625f&sxsrf=ADLYWILHo3AG_2Ti4M81b_keZUm22PeT-g%3A1734394247417&ei=h8FgZ8-OGaCe5NoPtO622QE&oq=interval+timer+in+jav&gs_lp=Egxnd3Mtd2l6LXNlcnAiFWludGVydmFsIHRpbWVyIGluIGphdioCCAAyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjWGlDJAVjdDXABeAGQAQCYAVOgAZIEqgEBN7gBAcgBAPgBAZgCCKACrQTCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICChAAGIAEGEMYigXCAgUQABiABMICChAAGIAEGBQYhwLCAgcQABiABBgKmAMAiAYBkAYKkgcBOKAH5TA&sclient=gws-wiz-serp 
-
-I wanted to add a popup modal to the navigation of the game so that users could read instructions to play the game. This YouTube video was extremely helpful in understanding how to hide elements that become available with an event listener. 
-
--   https://www.youtube.com/watch?v=gLWIYk0Sd38
+Emoji references: [Unicode.org](https://unicode.org/emoji/charts/full-emoji-list.html)
