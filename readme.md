@@ -5,8 +5,8 @@
 #### A modern take on the classic logic-based puzzle game — clear the board without triggering hidden mines!
 
 <!-- badges/ Icons https://simpleicons.org/-->
-### 🚀 Tech Stack
-<p>
+<!-- ### 🚀 Tech Stack -->
+
 <img src="https://img.shields.io/badge/-HTML5-black?style=for-the-badge&logoColor=white&logo=html5&color=E34F26" alt="html5" />
 
 <img src="https://img.shields.io/badge/-CSS-black?style=for-the-badge&logoColor=white&logo=css&color=663399" alt="css" />
@@ -14,10 +14,10 @@
 <img src="https://img.shields.io/badge/-javascript-black?style=for-the-badge&logoColor=white&logo=javascript&color=F7DF1E" alt="JavaScript" />
 
 <img src="https://img.shields.io/badge/-githubpages-black?style=for-the-badge&logoColor=white&logo=github&color=181717" alt="github pages" />
-</p>
+
 
 <!-- images of app (inc. logo  homepage etc.)-->
-### 🎮 Gameplay Preview
+## 🎮 Gameplay Preview
 Original Minesweeper (inspiration):
 <img src="https://cdn.mos.cms.futurecdn.net/f873f2282e16faeebdb4a09e2f3cef32.jpg" alt="Original Minesweeper" width="400"/>
 
