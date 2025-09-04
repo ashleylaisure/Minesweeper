@@ -6,7 +6,7 @@
 
 <!-- badges/ Icons https://simpleicons.org/-->
 <!-- ### 🚀 Tech Stack -->
-
+<p class="flex">
 <img src="https://img.shields.io/badge/-HTML5-black?style=for-the-badge&logoColor=white&logo=html5&color=E34F26" alt="html5" />
 
 <img src="https://img.shields.io/badge/-CSS-black?style=for-the-badge&logoColor=white&logo=css&color=663399" alt="css" />
@@ -14,6 +14,7 @@
 <img src="https://img.shields.io/badge/-javascript-black?style=for-the-badge&logoColor=white&logo=javascript&color=F7DF1E" alt="JavaScript" />
 
 <img src="https://img.shields.io/badge/-githubpages-black?style=for-the-badge&logoColor=white&logo=github&color=181717" alt="github pages" />
+</p>
 
 
 <!-- images of app (inc. logo  homepage etc.)-->
