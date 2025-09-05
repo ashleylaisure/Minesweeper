@@ -19,10 +19,12 @@
 
 <!-- images of app (inc. logo  homepage etc.)-->
 ## 🎮 Gameplay Preview
-Original Minesweeper (inspiration):
+###### Original Minesweeper (inspiration):
+
 <img src="https://cdn.mos.cms.futurecdn.net/f873f2282e16faeebdb4a09e2f3cef32.jpg" alt="Original Minesweeper" width="400"/>
 
-My version (developed with HTML, CSS, and JavaScript):
+###### My version (developed with HTML, CSS, and JavaScript):
+
 <img src="https://i.ibb.co/0VzBdgG/Screenshot-2024-12-16-143411.png" alt="Developed minesweeper game" width="400"/>
 
 <!-- ## 🌐 Demo video?
@@ -44,7 +46,7 @@ Each revealed square shows a number that indicates how many mines are hidden in 
 * 🎨 [Design](#design)
 * ✅ [Next Steps](#nextsteps)
 * 🌍 [Deployment](#deployment)
-* 👋 [Author](#author)
+* 👩🏾‍💻 [Author](#author)
 * 📜 [Attributions](#attributions)
 
 ## <a name="technologiesused"></a>🛠 Technologies Used
@@ -80,8 +82,8 @@ Here are the key features of Minesweeper:
 ## <a name="design"></a>🎨 Design
 For the design of my Minesweeper, I decided to divert from the traditional gray colorway and went with a blue/green look.
 
-### Wireframe Image
-<img src="https://i.ibb.co/sgrXXhF/Screenshot-2024-12-09-195540.png" width="400"/>
+#### Wireframe Image
+<img src="https://i.ibb.co/sgrXXhF/Screenshot-2024-12-09-195540.png" width="300"/>
 
 
 ## <a name="nextsteps"></a>✅ Project Next Steps
@@ -97,9 +99,7 @@ Here’s a list of ongoing tasks and planned features for the project:
 [📂 View the Repository](https://github.com/ashleylaisure/Minesweeper)
 
 
-## <a name="author"></a>👋 Author
-Hi, I’m Ashley Laisure 👋
-
+## <a name="author"></a>👩🏾‍💻 Author
 After countless hours mastering Minesweeper as a teenager, I rediscovered the thrill of its logic and challenge through coding. Rebuilding this game let me merge my love of problem-solving with my creativity for design. Whether writing code or imagining new features, I enjoy creating projects that are fun, interactive, and rewarding to play.
     
 ## <a name="attributions"></a>📜 Attributions
